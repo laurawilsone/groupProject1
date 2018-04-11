@@ -43,6 +43,25 @@ body {
    
 }
 
+/* About */
+
+.description {
+    width: 700px;
+    height: 500px;
+    margin-bottom: 200px;
+    float: left;
+    border: solid black;
+    padding: 10px;
+    font-size: 20px;
+    background-color: azure;
+}
+
+/* Creators */
+
+.creators {
+    
+}
+
 footer {
     background-color: azure;
     border-top: 4px solid black;
