@@ -1,3 +1,19 @@
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyD8CsO93MC3Q3vPEmand-CIIkiXPxcyK54",
+    authDomain: "trainhw-d3d3a.firebaseapp.com",
+    databaseURL: "https://trainhw-d3d3a.firebaseio.com",
+    storageBucket: "trainhw-d3d3a.appspot.com",
+    // messagingSenderId: "<SENDER_ID>",
+};
+
+firebase.initializeApp(config);
+
+// Create a variable to reference the database
+var database = firebase.database();
+
+
+
 
 
 
@@ -7,6 +23,13 @@ $(document).ready(function () {
     $('#dictionarySearch').on('click', function () {
 
         let searchWord = $('#dictionaryWord').val().trim();
+
+        if (/\s/.test(searchWord) ) { //add or for if a number or unfound word was entered
+            alert("error!!!!")
+            // It has any kind of whitespace
+        } else {
+
+
         const queryURL = 'https://cors-anywhere.herokuapp.com/https://od-api.oxforddictionaries.com/api/v1/entries/en/' + searchWord;
 
         $.ajax({
@@ -21,6 +44,7 @@ $(document).ready(function () {
                 console.log(searchWord);
                 callGoogle();
             });
+        };    
     });
     
 
