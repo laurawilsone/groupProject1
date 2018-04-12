@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    /* background-image: url("http://img.taopic.com/uploads/allimg/111203/1819-11120316392983.jpg"); */
+    background-image: url("../images/mainbackground.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,8 +17,6 @@ body {
 
 .input-group {
     margin-bottom: 30px;
-
-    
 }
 
 .button {
