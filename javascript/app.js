@@ -26,6 +26,7 @@ $(document).ready(function () {
         let searchWord = $('#dictionaryWord').val().trim();
 
         if (/\s/.test(searchWord) ) { //add or for if a number or unfound word was entered
+            $("#modal").iziModal('startLoading');
             alert("error!!!!")
             // It has any kind of whitespace
         } else {
@@ -42,6 +43,13 @@ $(document).ready(function () {
             }).then(function(response) {
                 console.log(response);
                 $('#dictionaryDefinition').text(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
+
+                var newWord = {
+                    word: searchWord,
+
+                }
+                database.ref().push(newWord);
+
                 console.log(searchWord);
                 callGoogle();
             });
