@@ -22,13 +22,24 @@ $(document).ready(function () {
        
 
     $('#dictionarySearch').on('click', function () {
-
+        event.preventDefault();
         let searchWord = $('#dictionaryWord').val().trim();
 
-        if (/\s/.test(searchWord) ) { //add or for if a number or unfound word was entered
-            $("#modal").iziModal('startLoading');
-            alert("error!!!!")
-            // It has any kind of whitespace
+        if (/\s/.test(searchWord) || !isNaN(searchWord)) { //add or for if a number or unfound word was entered
+            $("#modal-alert2").iziModal({
+                title: "Error!",
+                subtitle: 'Please enter only one word',
+                icon: 'icon-power_settings_new',
+                headerColor: '#BD5B5B',
+                width: 600,
+                timeout: 5000,
+                timeoutProgressbar: true,
+                transitionIn: 'fadeInDown',
+                transitionOut: 'fadeOutDown',
+                pauseOnHover: true,
+                autoOpen: true,
+            });
+            
         } else {
 
 
