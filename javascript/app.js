@@ -25,10 +25,14 @@ $(document).ready(function () {
         event.preventDefault();
         let searchWord = $('#dictionaryWord').val().trim();
 
-        if (/\s/.test(searchWord) || !isNaN(searchWord)) { //add or for if a number or unfound word was entered
+        console.log(typeof searchWord);
+        // || typeof searchWord === "string"
+
+        // /\s/.test(searchWord) || 
+        if (/^[a-zA-Z-]*$/.test(searchWord) == false) { //add or for if a number or unfound word was entered
             $("#modal-alert2").iziModal({
                 title: "Error!",
-                subtitle: 'Please enter only one word',
+                subtitle: 'Please enter only one word. No numbers or symbols',
                 icon: 'icon-power_settings_new',
                 headerColor: '#BD5B5B',
                 width: 600,
