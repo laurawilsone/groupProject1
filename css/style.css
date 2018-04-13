@@ -1,9 +1,22 @@
 .jumbotron {
-    background-color: azure;
-    color: black;
+  /*  background-color: azure; */
+    /*background-image: url("https://hdwallsource.com/img/2015/2/chalkboard-wallpaper-45741-46994-hd-wallpapers.jpg"); */
+    /*background-image: url("https://www.fbcgallatin.org/wp-content/uploads/2016/10/chalkboard.jpg");*/
+    background-image: url("http://www.multiversidadreal.edu.mx/wp-content/uploads/2016/01/pizarron.jpg");
+    color: white;
     text-align: center;
     margin-top: 20px;
-    border: solid black;
+    border: solid 6px rgba(231, 189, 134, 0.514);
+    border-radius: 25px;
+    
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
 }
 
 body {
@@ -33,12 +46,83 @@ body {
     margin-bottom: 200px;
     clear: both;
     float: left;
+    border: solid 6px rgba(231, 189, 134, 0.514);
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    /*background-color: azure; */
+    /*background-image: url("https://www.fbcgallatin.org/wp-content/uploads/2016/10/chalkboard.jpg");*/
+    /*background-image: url("https://hdwallsource.com/img/2015/2/chalkboard-wallpaper-45741-46994-hd-wallpapers.jpg"); */
+    background-image: url("http://www.multiversidadreal.edu.mx/wp-content/uploads/2016/01/pizarron.jpg");
+    border-radius: 25px;
+    /* position: absolute; */
+   
+}
+
+/* About */
+
+.description {
+    width: 700px;
+    height: 300px;
+    margin-bottom: 200px;
+    float: left;
+    border: solid 6px rgba(231, 189, 134, 0.514);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+   /* background-color: azure;*/
+    background-image: url("http://www.multiversidadreal.edu.mx/wp-content/uploads/2016/01/pizarron.jpg");
+    border-radius: 25px;
+}
+
+/* Creators */
+
+.one {
+    width: 600px;
+    height: 200px;
+    margin-bottom: 50px;
+    clear: both;
+    float: left;
     border: solid black;
     padding: 10px;
     font-size: 20px;
     background-color: azure;
-    /* position: absolute; */
-   
+    border-radius: 25px;
+      
+}
+
+.two {
+    width: 600px;
+    height: 200px;
+    margin-bottom: 30px;
+    clear: both;
+    float: left;
+    border: solid black;
+    padding: 10px;
+    font-size: 20px;
+    background-color: azure;
+    border-radius: 25px;
+}
+
+.three {
+    width: 600px;
+    height: 200px;
+    margin-bottom: 150px;
+    clear: both;
+    float: left;
+    border: solid black;
+    padding: 10px;
+    font-size: 20px;
+    background-color: azure;
+    border-radius: 25px;
+}
+
+.image {
+    width: 100px;
+    height: auto;
+    margin-top: 5px;
+    float: left;
+    margin-right: 15px;
 }
 
 footer {
