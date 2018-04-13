@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tell Me Something I Don't Know</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    <script src="main.js" async></script>
-   
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="javascript/app.js" async></script>
 </head>
+
 <body>
     <div class="container">
         <div class="jumbotron">
@@ -21,20 +25,31 @@
          <div class="col-lg-6">
             <div class="input-group">
                 <span class="input-group-btn">
-                    <button class="button" type="button">Search!</button>
+                    <button class="button" type="button" id="dictionarySearch">Search!</button>
                 </span>
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input type="text" class="form-control" placeholder="Search for..." id="dictionaryWord">
             </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
     </div>
 
-    <div id="main-box" class="box">
-            <section class="main-section">
-                <p>Definition Goes Here...</p>
-            </section>
+    <audio controls src=" "></audio>
+
+    <div class="row">
+            <div class="col-lg-6">
+            <div id="main-box" class="box">
+                    <section class="main-section">
+                        <p id="dictionaryDefinition">Definition Goes Here...</p>
+                    </section>
+            </div>
+        </div>
+            <!-- <div class="col-lg-6">
+            <div id="main-box" class="box">
+                    <section class="main-section">
+                        <p id="dictionaryDefinition">Definition Goes Here...</p>
+                    </section>
+            </div>
+        </div> -->
     </div>
-
-
 
 </body>
 
