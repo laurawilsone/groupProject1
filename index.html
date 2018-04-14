@@ -14,40 +14,40 @@
 
 <body>
 
+    <!-- switch to header, not footer, or make a sidebar. switch search box into row, increase height of firebase box -->
+    <!-- move audio box below -->
+    <!-- new background -->
+
     <div class="container">
         <div class="jumbotron">
                 <h1>Tell Me Something I Don't Know</h1>
                 <h3>Learning All of the Things</h3>
         </div>
 
-    <div class="row">
-         <div class="col-lg-6">
-            <div class="input-group">
-                <span class="input-group-btn">
-                    <button class="button" type="button" id="dictionarySearch">Search!</button>
-                </span>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="button" type="button" id="dictionarySearch">Search!</button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Search for..." onfocus="this.value=''" id="dictionaryWord">
+                </div>
+            </div>
+        </div>
 
-                <input type="text" class="form-control" placeholder="Search for..." onfocus="this.value=''" id="dictionaryWord">
+        <audio controls src=" "></audio>
 
-
-               
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-    </div>
-
-    <audio controls src=" "></audio>
-
-    <div class="row">
+        <div class="row">
             <div class="col-lg-6">
                 <div id="main-box" class="box">
-                        <section class="main-section">
-                            <p id="dictionaryDefinition">Definition Goes Here...</p>
-                        </section>
+                    <section class="main-section">
+                        <p id="dictionaryDefinition">Definition Goes Here...</p>
+                    </section>
                 </div>
             </div>    
 
             <div class="col-lg-6">
-            <div id="main-box" class="box">
+                <div id="main-box" class="box">
                     <section class="firebase-section">
                         <table class="table">
                             <thead>
@@ -67,15 +67,13 @@
                                 </tr>
                             </tbody>
                         </table>
-
                     </section>
+                </div>
             </div>
-    </div>
-
+        </div>
+    </div>        
 
     <div id="modal-alert2" aria-hidden="true" aria-labelledby="modal-alert2" role="dialog" class="iziModal"></div>
-
-
 
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/moment@2.22.0/moment.min.js"></script>
@@ -87,18 +85,14 @@
 
 <footer>
     <div class="">
-         
-            <nav>
-                <a class="home" href="index.html">Home</a>
+        <nav>
+            <a class="home" href="index.html">Home</a>
           
-                <a class="about" href="about.html">About</a>
+            <a class="about" href="about.html">About</a>
            
-                <a class="creators" href="creators.html">Meet the Creators</a>
-            </nav>
-                
+            <a class="creators" href="creators.html">Meet the Creators</a>
+        </nav>                
     </div>
-
-
 </footer>
 
 </html>

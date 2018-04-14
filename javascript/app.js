@@ -57,10 +57,14 @@ $(document).ready(function () {
             }
             }).then(function(response) {
                 console.log(response);
+
+                //check if definition exists otherwise do error word not found
+
                 $('#dictionaryDefinition').text(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
 
                 var newWord = {
                     word: searchWord,
+                    // time: moment().format....,
 
                 }
                 database.ref().push(newWord);
