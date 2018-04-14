@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tell Me Something I Don't Know</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
@@ -14,19 +13,42 @@
 </head>
 
 <body>
-
+        
     <!-- switch to header, not footer, or make a sidebar. switch search box into row, increase height of firebase box -->
     <!-- move audio box below -->
     <!-- new background -->
     <!-- add text/websit logo to corner of header/footer -->
     <!-- space on search bar - round corners. change color -->
+
+<div class="sidebarcontainer">
+    <div class="sidebar">
+        <nav>
+            <p class="home" href="index.html">Home</p>
+                          
+            <p class="about" href="about.html">About</p>
+                           
+            <p class="creators" href="creators.html">Creators</p>
+                
+            <p class="news" href="news.html">News</p>
+
+        </nav>
+    </div>
+</div>
+    
+
+
     <div class="container">
         <div class="jumbotron">
                 <h1>Tell Me Something I Don't Know</h1>
                 <h3>Learning All of the Things</h3>
         </div>
+    </div>
 
-        <div class="row">
+
+
+
+
+   <!--     <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
                     <span class="input-group-btn">
@@ -35,29 +57,39 @@
                     <input type="text" class="form-control" placeholder="Search for..." onfocus="this.value=''" id="dictionaryWord">
                 </div>
             </div>
-        </div>
+        </div> -->
 
-    <div id="audioplayer">
+<!--    <div id="audioplayer">
         <button id="pButton" class="play" controls src=" "></button>
         <!--<audio controls src=" "></audio> -->
-        <div id="timeline">
-            <div id="playhead"></div>
+    <!--    <div id="timeline">
+            <div id="playhead"></div> 
         
         </div>
-    </div>
+    </div> -->
 
-
+    <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div id="main-box" class="box">
+                    <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="button" type="button" id="dictionarySearch">Search!</button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Search for..." onfocus="this.value=''" id="dictionaryWord">
+                        </div>
+                <div id="main-box" class="definition">
                     <section class="main-section">
                         <p id="dictionaryDefinition">Definition Goes Here...</p>
                     </section>
                 </div>
             </div>    
+        </div>
+    </div>
 
+    <div class="container">
+        <div class="row">
             <div class="col-lg-6">
-                <div id="main-box" class="box">
+                <div id="firebase-box" class="firebase">
                     <section class="firebase-section">
                         <table class="table">
                             <thead>
@@ -79,8 +111,18 @@
                         </table>
                     </section>
                 </div>
+            </div> 
+        </div> 
+    
+
+        <div id="audioplayer">
+                <button id="pButton" class="play" controls src=" "></button>
+                <!--<audio controls src=" "></audio> -->
+                <div id="timeline">
+                    <div id="playhead"></div>
+                
+                </div>
             </div>
-        </div>
     </div>        
 
     <div id="modal-alert2" aria-hidden="true" aria-labelledby="modal-alert2" role="dialog" class="iziModal"></div>
@@ -94,7 +136,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.js" type="text/javascript"></script>
 </body>
 
-<footer>
+<!--<footer>
     <div class="">
         <nav>
             <a class="home" href="index.html">Home</a>
@@ -107,6 +149,6 @@
             </nav>
                 
     </div>
-</footer>
+</footer> -->
 
 </html>

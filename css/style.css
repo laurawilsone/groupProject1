@@ -11,8 +11,36 @@
     margin-top: 20px;
     border: solid 6px rgba(231, 189, 134, 0.514);
     border-radius: 25px;
+    margin-left: 150px
     
 }
+
+.sidebar {
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 10px;
+    width: 180px;
+    height: 720px;
+    float:left;
+    border:solid 6px black;
+    border-radius: 10px;
+}
+
+
+nav  {
+    color: black;
+    text-decoration: none;
+    padding-left: 15px;
+    margin-top: 175px;
+    font-size: 30px;
+    
+}
+
+.home creators about news{
+    margin-bottom: 10px;
+}
+
 
 h1 {
     font-size: 50px;
@@ -23,16 +51,16 @@ h3 {
 }
 
 body {
-    font-family: 'Architects Daughter', cursive;
-    background-image: url("../images/mainbackground.jpg");
+    font-family: 'Raleway', sans-serif;
+    background-image: url("../images/lettersbackground");
     height: 100%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
 
 .input-group {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .button {
@@ -41,9 +69,13 @@ body {
     border-radius: 8px;
     font-size: 20px;
     border: solid 2px black;
+    margin:right 5px;
+    margin-left: 150px;
 }
 
 #audioplayer {
+    margin-top: 350px;
+    margin-left: 150px;
     height: 70px;
     width: 500px;
     border: solid black;
@@ -87,11 +119,13 @@ body {
 }
 
 
-.box {
-    width: 540px;
+.definition {
+    width: 500px;
     height: 300px;
-    margin-top: 30px;
+   /* overflow: scroll; */
+    margin-top: 20px;
     margin-bottom: 200px;
+    margin-left: 130px;
     clear: both;
     float: left;
     position: absolute;
@@ -106,6 +140,28 @@ body {
     border-radius: 25px;
     /* position: absolute; */
    
+}
+
+.firebase {
+    width: 500px;
+    height: 400px;
+    overflow: scroll;
+    margin-top: 5px;
+    margin-bottom: 200px;
+    margin-left: 650px;
+    clear: both;
+    float: right;
+    position: absolute;
+    border: solid 6px rgba(231, 189, 134, 0.514);
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    /*background-color: azure; */
+    /*background-image: url("https://www.fbcgallatin.org/wp-content/uploads/2016/10/chalkboard.jpg");*/
+    /*background-image: url("https://hdwallsource.com/img/2015/2/chalkboard-wallpaper-45741-46994-hd-wallpapers.jpg"); */
+    background-image: url("http://www.multiversidadreal.edu.mx/wp-content/uploads/2016/01/pizarron.jpg");
+    border-radius: 25px;
+    /* position: absolute; */
 }
 
 /* About */
@@ -195,11 +251,11 @@ body {
 
 }
 
-footer {
+/*footer {
     background-color: azure;
     border-top: 4px solid black;
    /* margin-bottom: 10px; */
-    margin-top: 600px;
+   /* margin-top: 600px;
     padding-bottom: 10px;
     height: 100px;
     text-align: center;
@@ -208,11 +264,12 @@ footer {
     bottom: 0;
     width: 100%;
     /* clear: both; */
-    font-size: 20px;
-}
+   /* font-size: 20px;
+}*/
 
 
-nav {
+
+/*nav {
     margin-top: 25px;
 
 }
@@ -229,4 +286,4 @@ nav a {
 
 nav a:first-child {
     border-left: 0 none;
-}
+}*/
