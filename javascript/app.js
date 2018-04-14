@@ -25,10 +25,11 @@ $(document).ready(function () {
         let searchWord = $('#dictionaryWord').val().trim();
 
         if (/\s/.test(searchWord) ) { //add or for if a number or unfound word was entered
-            alert("error!!!!")
+            $('#modal').iziModal();
+            alert("alert");
             // It has any kind of whitespace
         } else {
-
+            
 
         const queryURL = 'https://cors-anywhere.herokuapp.com/https://od-api.oxforddictionaries.com/api/v1/entries/en/' + searchWord;
 

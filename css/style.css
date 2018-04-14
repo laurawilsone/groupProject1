@@ -40,12 +40,58 @@ body {
     border: solid 2px black;
 }
 
+#audioplayer {
+    height: 70px;
+    width: 500px;
+    border: solid black;
+    border-radius: 25px;
+    background-color: white;
+}
+
+#pButton{
+	height:60px;
+    width: 60px;
+    border: none;
+	background-size: 50% 50%;
+    background-position: center;
+    float: left;
+   
+   
+}
+
+.play{
+    background: url('https://image.freepik.com/free-icon/play-button-arrowhead_318-43739.jpg') no-repeat;
+
+}
+.pause{background: url('../images/pause.png') no-repeat;}
+
+
+#timeline{
+	width: 400px;
+	height: 20px;
+	background: rgb(153, 233, 233);
+	margin-top: 20px;
+	float: left;
+	border-radius: 15px;
+}
+
+#playhead{
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-top: 1px;
+	background: black;
+}
+
+
 .box {
     width: 540px;
     height: 300px;
+    margin-top: 30px;
     margin-bottom: 200px;
     clear: both;
     float: left;
+    position: absolute;
     border: solid 6px rgba(231, 189, 134, 0.514);
     padding: 10px;
     font-size: 20px;
@@ -123,6 +169,27 @@ body {
     margin-top: 5px;
     float: left;
     margin-right: 15px;
+}
+
+/* News */
+
+.newsbox{
+    width: 540px;
+    height: 400px;
+    margin-bottom: 200px;
+    clear: both;
+    float: left;
+    border: solid 6px rgba(231, 189, 134, 0.514);
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    /*background-color: azure; */
+    /*background-image: url("https://www.fbcgallatin.org/wp-content/uploads/2016/10/chalkboard.jpg");*/
+    /*background-image: url("https://hdwallsource.com/img/2015/2/chalkboard-wallpaper-45741-46994-hd-wallpapers.jpg"); */
+    background-image: url("http://www.multiversidadreal.edu.mx/wp-content/uploads/2016/01/pizarron.jpg");
+    border-radius: 25px;
+    /* position: absolute; */
+
 }
 
 footer {
