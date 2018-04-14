@@ -1,3 +1,6 @@
+/* need footer changed - or stick to bottom/remove margin in description box */
+
+
 .jumbotron {
   /*  background-color: azure; */
     /*background-image: url("https://hdwallsource.com/img/2015/2/chalkboard-wallpaper-45741-46994-hd-wallpapers.jpg"); */
@@ -20,7 +23,7 @@ h3 {
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Architects Daughter', cursive;
     background-image: url("../images/mainbackground.jpg");
     height: 100%;
     background-position: center;

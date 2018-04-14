@@ -5,48 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tell Me Something I Don't Know</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.css">
 
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.0/moment.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="javascript/app.js" async></script>
 </head>
 
 <body>
-    <!-- Modal structure -->
-<div id="modal"> <!-- data-iziModal-fullscreen="true"  data-iziModal-title="Welcome"  data-iziModal-subtitle="Subtitle"  data-iziModal-icon="icon-home" -->
-    <div id="modal" class="iziModal" data-izimodal-group="alerts"></div>
-</div>
- 
-<!-- Trigger to open Modal -->
-<a href="https://github.com/dolce/iziModal" class="trigger">Modal</a>
 
-
+    <!-- switch to header, not footer, or make a sidebar. switch search box into row, increase height of firebase box -->
+    <!-- move audio box below -->
+    <!-- new background -->
+    <!-- add text/websit logo to corner of header/footer -->
+    <!-- space on search bar - round corners. change color -->
     <div class="container">
         <div class="jumbotron">
                 <h1>Tell Me Something I Don't Know</h1>
                 <h3>Learning All of the Things</h3>
         </div>
 
-    <div class="row">
-         <div class="col-lg-6">
-            <div class="input-group">
-                <span class="input-group-btn">
-                    <button class="button" type="button" id="dictionarySearch">Search!</button>
-                </span>
-
-                <input type="text" class="form-control" placeholder="Search for..." onfocus="this.value=''" id="dictionaryWord">
-
-
-               
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-    </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="button" type="button" id="dictionarySearch">Search!</button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Search for..." onfocus="this.value=''" id="dictionaryWord">
+                </div>
+            </div>
+        </div>
 
     <div id="audioplayer">
         <button id="pButton" class="play" controls src=" "></button>
@@ -57,33 +46,60 @@
         </div>
     </div>
 
-    <div class="row">
+
+        <div class="row">
             <div class="col-lg-6">
-            <div id="main-box" class="box">
+                <div id="main-box" class="box">
                     <section class="main-section">
                         <p id="dictionaryDefinition">Definition Goes Here...</p>
                     </section>
+                </div>
+            </div>    
+
+            <div class="col-lg-6">
+                <div id="main-box" class="box">
+                    <section class="firebase-section">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Word</th>
+                                    <th scope="col">Date Searched</th>
+                                </tr>
+                            </thead>
+                            <tbody id="wordTable">
+                                <tr>
+                                    <td>Baseball</td>
+                                    <td>4/12/2018 12:48 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Programming</td>
+                                    <td>4/12/2018 1:22 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
             </div>
         </div>
-            <!-- <div class="col-lg-6">
-            <div id="main-box" class="box">
-                    <section class="main-section">
-                        <p id="dictionaryDefinition">Definition Goes Here...</p>
-                    </section>
-            </div>
-        </div> -->
-    </div>
+    </div>        
+
+    <div id="modal-alert2" aria-hidden="true" aria-labelledby="modal-alert2" role="dialog" class="iziModal"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.js" type="text/javascript"></script>
+    <script src="javascript/app.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.js" type="text/javascript"></script>
 </body>
 
 <footer>
     <div class="">
-         
-            <nav>
-                <a class="home" href="index.html">Home</a>
+        <nav>
+            <a class="home" href="index.html">Home</a>
           
-                <a class="about" href="about.html">About</a>
+            <a class="about" href="about.html">About</a>
            
                 <a class="creators" href="creators.html">Meet the Creators</a>
 
@@ -91,8 +107,6 @@
             </nav>
                 
     </div>
-
-
 </footer>
 
 </html>

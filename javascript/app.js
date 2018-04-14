@@ -1,9 +1,9 @@
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyD8CsO93MC3Q3vPEmand-CIIkiXPxcyK54",
-    authDomain: "trainhw-d3d3a.firebaseapp.com",
-    databaseURL: "https://trainhw-d3d3a.firebaseio.com",
-    storageBucket: "trainhw-d3d3a.appspot.com",
+    apiKey: "AIzaSyD9ds5k0bf8JxdiYFQzO9S3pooSC3PWwn0",
+    authDomain: "apigroupproject1.firebaseapp.com",
+    databaseURL: "https://apigroupproject1.firebaseio.com",
+    storageBucket: "apigroupproject1.appspot.com",
     // messagingSenderId: "<SENDER_ID>",
 };
 
@@ -17,17 +17,34 @@ var database = firebase.database();
 
 
 
+
 $(document).ready(function () {
        
 
     $('#dictionarySearch').on('click', function () {
-
+        event.preventDefault();
         let searchWord = $('#dictionaryWord').val().trim();
 
-        if (/\s/.test(searchWord) ) { //add or for if a number or unfound word was entered
-            $('#modal').iziModal();
-            alert("alert");
-            // It has any kind of whitespace
+
+        console.log(typeof searchWord);
+        // || typeof searchWord === "string"
+
+        // /\s/.test(searchWord) || 
+        if (/^[a-zA-Z-]*$/.test(searchWord) == false) { //add or for if a number or unfound word was entered
+            $("#modal-alert2").iziModal({
+                title: "Error!",
+                subtitle: 'Please enter only one word. No numbers or symbols',
+                icon: 'icon-power_settings_new',
+                headerColor: '#BD5B5B',
+                width: 600,
+                timeout: 5000,
+                timeoutProgressbar: true,
+                transitionIn: 'fadeInDown',
+                transitionOut: 'fadeOutDown',
+                pauseOnHover: true,
+                autoOpen: true,
+            });
+            
         } else {
             
 
@@ -41,7 +58,18 @@ $(document).ready(function () {
             }
             }).then(function(response) {
                 console.log(response);
+
+                //check if definition exists otherwise do error word not found
+
                 $('#dictionaryDefinition').text(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
+
+                var newWord = {
+                    word: searchWord,
+                    time: moment().format('MMMM Do YYYY, h:mm:ss a')
+                }
+
+                database.ref().push(newWord);
+
                 console.log(searchWord);
                 callGoogle();
             });
@@ -76,4 +104,22 @@ $(document).ready(function () {
         });
     };    
         // .catch(function(arg1, arg2) { console.log(arg1, arg2) })
+
+    
+    database.ref().on("child_added", function(snapshot) {
+
+        word = snapshot.val().word;
+        time = snapshot.val().time;
+
+        // Log everything that's coming out of snapshot
+        console.log(snapshot.val());
+
+        // Change the HTML table to reflect added train
+        $('#wordTable').after("<tr><td>" + word + "</td><td>" + time + "</td></tr>");
+
+        // Handle the errors
+    }, function(errorObject) {
+        console.log("Errors handled: " + errorObject.code);
+    });
+
 });
