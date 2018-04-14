@@ -25,6 +25,7 @@ $(document).ready(function () {
         event.preventDefault();
         let searchWord = $('#dictionaryWord').val().trim();
 
+
         console.log(typeof searchWord);
         // || typeof searchWord === "string"
 
@@ -45,7 +46,7 @@ $(document).ready(function () {
             });
             
         } else {
-
+            
 
         const queryURL = 'https://cors-anywhere.herokuapp.com/https://od-api.oxforddictionaries.com/api/v1/entries/en/' + searchWord;
 
