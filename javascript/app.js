@@ -1,9 +1,9 @@
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyD8CsO93MC3Q3vPEmand-CIIkiXPxcyK54",
-    authDomain: "trainhw-d3d3a.firebaseapp.com",
-    databaseURL: "https://trainhw-d3d3a.firebaseio.com",
-    storageBucket: "trainhw-d3d3a.appspot.com",
+    apiKey: "AIzaSyD9ds5k0bf8JxdiYFQzO9S3pooSC3PWwn0",
+    authDomain: "apigroupproject1.firebaseapp.com",
+    databaseURL: "https://apigroupproject1.firebaseio.com",
+    storageBucket: "apigroupproject1.appspot.com",
     // messagingSenderId: "<SENDER_ID>",
 };
 
@@ -11,6 +11,7 @@ firebase.initializeApp(config);
 
 // Create a variable to reference the database
 var database = firebase.database();
+
 
 
 
@@ -25,6 +26,7 @@ $(document).ready(function () {
         let searchWord = $('#dictionaryWord').val().trim();
 
         if (/\s/.test(searchWord) ) { //add or for if a number or unfound word was entered
+            $("#modal").iziModal('startLoading');
             alert("error!!!!")
             // It has any kind of whitespace
         } else {
@@ -41,6 +43,13 @@ $(document).ready(function () {
             }).then(function(response) {
                 console.log(response);
                 $('#dictionaryDefinition').text(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
+
+                var newWord = {
+                    word: searchWord,
+
+                }
+                database.ref().push(newWord);
+
                 console.log(searchWord);
                 callGoogle();
             });
