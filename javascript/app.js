@@ -100,7 +100,7 @@ $(document).ready(function () {
         }).then(function(res) { 
             console.log(res) 
             console.log('data:audio/mp3;base64,' + res.audioContent);
-            $('audio').attr('src', 'data:audio/mp3;base64,' + res.audioContent);
+            $('#pButton').attr('src', 'data:audio/mp3;base64,' + res.audioContent);
         });
     };    
         // .catch(function(arg1, arg2) { console.log(arg1, arg2) })
