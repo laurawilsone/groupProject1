@@ -64,9 +64,9 @@ $(document).ready(function () {
 
                 var newWord = {
                     word: searchWord,
-                    // time: moment().format....,
-
+                    time: moment().format('MMMM Do YYYY, h:mm:ss a')
                 }
+
                 database.ref().push(newWord);
 
                 console.log(searchWord);
@@ -103,4 +103,22 @@ $(document).ready(function () {
         });
     };    
         // .catch(function(arg1, arg2) { console.log(arg1, arg2) })
+
+    
+    database.ref().on("child_added", function(snapshot) {
+
+        word = snapshot.val().word;
+        time = snapshot.val().time;
+
+        // Log everything that's coming out of snapshot
+        console.log(snapshot.val());
+
+        // Change the HTML table to reflect added train
+        $('#wordTable').after("<tr><td>" + word + "</td><td>" + time + "</td></tr>");
+
+        // Handle the errors
+    }, function(errorObject) {
+        console.log("Errors handled: " + errorObject.code);
+    });
+
 });
